@@ -372,9 +372,9 @@ def staticize_prototypes(contents):
 
 
 def main():
-    QBE_ROOT = os.path.join(os.getcwd(), "qbe")
+    QBE_ROOT = os.path.join(os.getcwd(), "qbe2")
     if not os.path.exists(QBE_ROOT):
-        subprocess.check_call(["git", "clone", "git://c9x.me/qbe.git"])
+        subprocess.check_call(["git", "clone", "https://github.com/AmigaSchool/qbe2.git"])
         for patch in glob.glob("patches/*.patch"):
             subprocess.check_call(["git", "am", os.path.join("..", patch)], cwd=QBE_ROOT)
 
